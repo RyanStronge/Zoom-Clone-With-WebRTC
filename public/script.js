@@ -78,6 +78,10 @@ function connectToNewUser(userId, stream) {
 function addVideoStream(video, stream) {
   //Sets the video's source object to the stream
   video.srcObject = stream
+  //Add ID to each video for use by selenium
+  let div = document.getElementById("video-grid");
+  let numberOfChildren = div.children.length;
+  video.setAttribute("id", "video" + (numberOfChildren));
   //When the video element loads, play the video
   video.addEventListener('loadedmetadata', () => {
     video.play()
