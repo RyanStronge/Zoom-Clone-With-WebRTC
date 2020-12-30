@@ -89,3 +89,4 @@ function addVideoStream(video, stream) {
   //Append the video to the video grid 
   videoGrid.append(video)
 }
+
